@@ -44,7 +44,7 @@ cd gr-splash/examples
 
 python top_block.py
 
-Example 2: In combination with LLSR (see: https://github.com/michelbarbeau/gr-dflood)
+Example 2: In combination with LLSR (see: https://github.com/michelbarbeau/gr-llsr)
 
 ![LLSR Example](https://github.com/michelbarbeau/gr-splash/blob/master/node_LLSR.png)
 
