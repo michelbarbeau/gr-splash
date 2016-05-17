@@ -1,6 +1,4 @@
-#  Flooding-based UnderwaterAcoustic Communication Protocol (DFLOOD) Implementation for GNU Radio
-
-Orthogonal frequency-division multiplexing (OFDM) transceiver.
+#  Orthogonal frequency-division multiplexing (OFDM) transceiver.
 
 # Copyright 2016 Carleton University.
 # Authors: Ahmad Traboulsi & Michel Barbeau
