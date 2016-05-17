@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<block>
+  <name>XCEIVER</name>
+  <key>splash_XCEIVER</key>
+  <category>splash</category>
+  <import>import splash</import>
+  <make>splash.XCEIVER()</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>Sampling rates</name>
+    <key>samp_rate</key>
+    <value>48000</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>TX Gain</name>
+    <key>tx_gain</key>
+    <value>1</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>RX Gain</name>
+    <key>rx_gain</key>
+    <value>1</value>
+    <type>int</type>
+  </param>
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <!-- <name>from_ulp</name> -->
+    <name>in</name>
+    <!-- <type>message</type> -->
+    <type>byte</type>
+    <optional>1</optional>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <!-- <name>to_ulp</name> -->
+    <!--  <type>message</type> -->
+    <type>byte</type>
+    <optional>1</optional>
+  </source>
+ <doc>
+Orthogonal frequency-division multiplexing (OFDM) transceiver.
+ </doc>
+</block>
