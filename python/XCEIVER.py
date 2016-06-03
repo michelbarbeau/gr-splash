@@ -6,7 +6,7 @@
 # -------------------------------------------------------------- 
 # Copyright 2016 Carleton University.
 # Authors: Ahmad Traboulsi & Michel Barbeau
-# Version: May 176, 2016
+# Version: June 3, 2016
 # 
 # This is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
