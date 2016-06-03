@@ -34,7 +34,7 @@ import pmt
 
 class XCEIVER(gr.hier_block2):
 
-    def __init__(self,samp_rate=48000,tx_gain=1,rx_gain=1):
+    def __init__(self,samp_rate=48000,tx_gain=100,rx_gain=1):
         gr.hier_block2.__init__(
             self, "XCEIVER",
            gr.io_signature(1, 1, gr.sizeof_char),
@@ -54,7 +54,7 @@ class XCEIVER(gr.hier_block2):
         self.sideband_rx = sideband_rx = 4000
         self.sideband = sideband = 4000
         self.samp_rate = samp_rate
-        self.tx_gain=1
+        self.tx_gain=tx_gain
         self.rx_gain=1
         self.pilot_symbols = pilot_symbols = ((1, 1, 1, -1,),)
         self.pilot_carriers = pilot_carriers = ((-21, -7, 7, 21,),)
