@@ -35,10 +35,15 @@
        * optional (set to 1 for optional inputs) -->
   <sink>
     <!-- <name>from_ulp</name> -->
-    <name>in</name>
+    <name>audio in</name>
+    <!-- <type>message</type> -->
+    <type>int</type>
+  </sink>
+  <sink>
+    <!-- <name>from_ulp</name> -->
+    <name>frame in</name>
     <!-- <type>message</type> -->
     <type>byte</type>
-    <optional>1</optional>
   </sink>
 
   <!-- Make one 'source' node per output. Sub-nodes:
@@ -47,13 +52,18 @@
        * vlen
        * optional (set to 1 for optional inputs) -->
   <source>
-    <name>out</name>
     <!-- <name>to_ulp</name> -->
+    <name>audio out</name>
+    <!--  <type>message</type> -->
+    <type>int</type>
+  </source>
+  <source>
+    <!-- <name>to_ulp</name> -->
+    <name>frame out</name>
     <!--  <type>message</type> -->
     <type>byte</type>
-    <optional>1</optional>
   </source>
  <doc>
-Orthogonal frequency-division multiplexing (OFDM) transceiver.
+Orthogonal frequency-division multiplexing (OFDM) Transceiver.
  </doc>
 </block>

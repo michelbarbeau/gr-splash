@@ -16,7 +16,9 @@
 # along with GNU Radio; see the file COPYING.  If not, write to
 # the Free Software Foundation, Inc., 51 Franklin Street,
 # Boston, MA 02110-1301, USA.
-
 install(FILES
-    splash_XCEIVER.xml DESTINATION share/gnuradio/grc/blocks
+    splash_XCEIVER.xml
+    splash_packet_encoder.xml
+    splash_packet_decoder.xml
+    DESTINATION share/gnuradio/grc/blocks
 )

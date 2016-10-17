@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<block>
+  <name>Packet Decoder</name>
+  <key>splash_packet_decoder</key>
+  <category>splash</category>
+  <import>import splash</import>
+  <make>splash.packet_decoder(
+          access_code=$access_code,
+          threshold=$threshold
+        )
+  </make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+	<param>
+		<name>Access Code</name>
+		<key>access_code</key>
+		<value></value>
+		<type>string</type>
+	</param>
+	<param>
+		<name>Threshold</name>
+		<key>threshold</key>
+		<value>-1</value>
+		<type>int</type>
+	</param>
+	<sink>
+		<name>in</name>
+		<type>byte</type>
+	</sink>
+	<source>
+		<name>out</name>
+		<type>byte</type>
+	</source>
+	<doc>
+This block is part of gr-splash.
+
+Packet decoder block, for use with the gnuradio demodulator blocks: gmsk, psk, qam.
+
+Access Code: string of 1's and 0's, leave blank for automatic.
+
+Threshold: -1 for automatic.
+	</doc>
+</block>

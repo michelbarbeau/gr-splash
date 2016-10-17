@@ -31,7 +31,10 @@ endif()
 GR_PYTHON_INSTALL(
     FILES
     __init__.py
-    XCEIVER.py DESTINATION ${GR_PYTHON_DIR}/splash
+    XCEIVER.py
+    packet_encoder.py
+    packet_decoder.py
+    DESTINATION ${GR_PYTHON_DIR}/splash
 )
 
 ########################################################################

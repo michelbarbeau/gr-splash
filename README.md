@@ -1,8 +1,8 @@
-#  Orthogonal frequency-division multiplexing (OFDM) transceiver.
+#  Frequency-Shift Keying (FSK) transceiver, Packet/Encoder Decoder and Forwad Error Correction (FEC).
 
 # Copyright 2016 Carleton University.
-# Authors: Ahmad Traboulsi & Michel Barbeau
-# Version: May 17, 2016
+# Authors: Michel Barbeau, Margarita Otochkina & Ahmad Traboulsi
+# Version: October 17, 2016
 
 ## Installing 
 
@@ -36,7 +36,7 @@ Example 1: In combination with DFLOOD (see: https://github.com/michelbarbeau/gr-
 
 To run within gnuradio-companion:
 
-Open the flow graph  gr-splash/examples/node_DFLOOD.grc
+Open the flow graph  gr-splash/examples/node_0_DFLOOD.grc
 
 To run outside gnuradio-companion (after generating the flow graph):
 
@@ -50,7 +50,7 @@ Example 2: In combination with LLSR (see: https://github.com/michelbarbeau/gr-ll
 
 To run within gnuradio-companion 
 
-Open the flow graph  gr-splash/examples/node_LLSR.grc
+Open the flow graph  gr-splash/examples/node_0_LLSR.grc
 
 To run outside gnuradio-companion (after generating the flow graph):
 
