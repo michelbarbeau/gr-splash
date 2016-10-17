@@ -1,4 +1,4 @@
-#  Frequency-Shift Keying (FSK) transceiver, Packet/Encoder Decoder and Forwad Error Correction (FEC).
+#  Frequency-Shift Keying (FSK) Transceiver, Packet/Encoder Decoder and Forwad Error Correction (FEC).
 
 # Copyright 2016 Carleton University.
 # Authors: Michel Barbeau, Margarita Otochkina & Ahmad Traboulsi
