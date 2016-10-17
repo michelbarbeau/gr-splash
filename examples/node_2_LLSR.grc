@@ -117,7 +117,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(448, 509)</value>
+      <value>(400, 501)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -320,7 +320,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(88, 381)</value>
+      <value>(96, 381)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -375,7 +375,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(680, 237)</value>
+      <value>(664, 245)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -579,7 +579,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(760, 529)</value>
+      <value>(680, 417)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -703,7 +703,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(104, 549)</value>
+      <value>(168, 541)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -750,7 +750,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(240, 613)</value>
+      <value>(216, 605)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -848,7 +848,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(136, 463)</value>
+      <value>(136, 455)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -986,97 +986,6 @@
     </param>
   </block>
   <block>
-    <key>dflood_dflood</key>
-    <param>
-      <key>addr</key>
-      <value>2</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>broadcast_interval</key>
-      <value>30</value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>data_to_file</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>debug</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>errors_to_file</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>FEC</key>
-      <value>None</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(392, 288)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>dflood_dflood_0</value>
-    </param>
-    <param>
-      <key>Plt</key>
-      <value>120</value>
-    </param>
-    <param>
-      <key>Slt</key>
-      <value>50</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>Ndupl</key>
-      <value>2</value>
-    </param>
-    <param>
-      <key>Tmax</key>
-      <value>65</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>Tmin</key>
-      <value>5</value>
-    </param>
-    <param>
-      <key>my_sink_addr</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>R</key>
-      <value>2</value>
-    </param>
-  </block>
-  <block>
     <key>digital_map_bb</key>
     <param>
       <key>alias</key>
@@ -1117,6 +1026,85 @@
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>llsr_llsr_mac</key>
+    <param>
+      <key>timeout</key>
+      <value>0.01</value>
+    </param>
+    <param>
+      <key>addr</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>backoff_randomness</key>
+      <value>0.05</value>
+    </param>
+    <param>
+      <key>exp_backoff</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>broadcast_interval</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>data_to_file</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>errors_to_file</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(448, 317)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>llsr_llsr_mac_0</value>
+    </param>
+    <param>
+      <key>maximum_attempts</key>
+      <value>5</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>max_queue_size</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>node_expiry_delay</key>
+      <value>100</value>
     </param>
   </block>
   <block>
@@ -1288,7 +1276,7 @@
   </connection>
   <connection>
     <source_block_id>Async_Decoder</source_block_id>
-    <sink_block_id>dflood_dflood_0</sink_block_id>
+    <sink_block_id>llsr_llsr_mac_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>from_radio</sink_key>
   </connection>
@@ -1324,7 +1312,7 @@
   </connection>
   <connection>
     <source_block_id>blocks_message_strobe_2</source_block_id>
-    <sink_block_id>dflood_dflood_0</sink_block_id>
+    <sink_block_id>llsr_llsr_mac_0</sink_block_id>
     <source_key>strobe</source_key>
     <sink_key>ctrl_in</sink_key>
   </connection>
@@ -1336,7 +1324,7 @@
   </connection>
   <connection>
     <source_block_id>blocks_random_pdu_0_0</source_block_id>
-    <sink_block_id>dflood_dflood_0</sink_block_id>
+    <sink_block_id>llsr_llsr_mac_0</sink_block_id>
     <source_key>pdus</source_key>
     <sink_key>from_app</sink_key>
   </connection>
@@ -1353,28 +1341,28 @@
     <sink_key>in</sink_key>
   </connection>
   <connection>
-    <source_block_id>dflood_dflood_0</source_block_id>
+    <source_block_id>digital_map_bb_0</source_block_id>
+    <sink_block_id>blocks_char_to_float_0_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>llsr_llsr_mac_0</source_block_id>
     <sink_block_id>blocks_message_debug_0</sink_block_id>
     <source_key>to_app</source_key>
     <sink_key>print_pdu</sink_key>
   </connection>
   <connection>
-    <source_block_id>dflood_dflood_0</source_block_id>
+    <source_block_id>llsr_llsr_mac_0</source_block_id>
     <sink_block_id>Async_Ecnoder</sink_block_id>
     <source_key>to_radio</source_key>
     <sink_key>in</sink_key>
   </connection>
   <connection>
-    <source_block_id>dflood_dflood_0</source_block_id>
+    <source_block_id>llsr_llsr_mac_0</source_block_id>
     <sink_block_id>blocks_message_debug_2</sink_block_id>
     <source_key>to_radio</source_key>
     <sink_key>print_pdu</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>digital_map_bb_0</source_block_id>
-    <sink_block_id>blocks_char_to_float_0_1</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>splash_XCEIVER_0</source_block_id>
