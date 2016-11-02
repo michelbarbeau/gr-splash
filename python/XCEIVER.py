@@ -69,7 +69,7 @@ class XCEIVER(gr.hier_block2):
         # Receiver
         self.blocks_float_to_complex_0 = blocks.float_to_complex(1)
 
-        # Construct a FIR filters with the given taps and a composite frequency 
+        # Construct FIR filters with the given taps and a composite frequency 
         # translation that shifts center_freq down to zero Hz. The frequency 
         # translation logically comes before the filtering operation.
         # Parameters
