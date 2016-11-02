@@ -61,7 +61,6 @@ class XCEIVER(gr.hier_block2):
         self.sideband_rx = 800
         self.samp_rate = samp_rate
         self.interpolation = 100 # w.r.t. transmitter
-        self.decimation =  1 # w.r.t. transmitter
         self.carrier = 8000 # Hz
 	# sensitivity is pi * modulation_index/samples_per_symbol
 	self.sensitivity = (math.pi*0.6)/self.sps
@@ -210,12 +209,6 @@ class XCEIVER(gr.hier_block2):
 
     def set_interpolation(self, interpolation):
         self.interpolation = interpolation
-
-    def get_decimation(self):
-        return self.decimation
-
-    def set_decimation(self, decimation):
-        self.decimation = decimation
 
     def get_carrier(self):
         return self.carrier
