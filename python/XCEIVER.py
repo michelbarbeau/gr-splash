@@ -6,7 +6,7 @@
 # ----------------------------------------
 # Copyright 2016 Carleton University.
 # Authors: Michel Barbeau & Ahmad Traboulsi
-# Version: October 9, 2016
+# Version: November 1, 2016
 # 
 # This is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -41,19 +41,24 @@ class XCEIVER(gr.hier_block2):
         gr.hier_block2.__init__(
            self, 
            "XCEIVER",
-           # input signature
-           gr.io_signaturev(2, 2, [gr.sizeof_int*1, gr.sizeof_char*1]),
+           # input signature,
+           # Port 1 = audio in
+           #      2 = frame in
+           gr.io_signaturev(2, 2, [gr.sizeof_float, gr.sizeof_char]),
 	   # output signature
-           gr.io_signaturev(2, 2, [gr.sizeof_int*1, gr.sizeof_char*1]))
+           # Port 1 = audio out
+           #      2 = frame out
+           #      3 = receive filter output
+           gr.io_signaturev(3, 3, [gr.sizeof_float, gr.sizeof_char, gr.sizeof_gr_complex]))
 
         #######################################################################
         # Variables
 	self.tx_gain = tx_gain
-        self.transition = 1000
+        self.transition = 50
 	# samples_per_symbol
         self.sps = 8
-	self.sideband_tx = 500
-        self.sideband_rx = 500
+	self.sideband_tx = 800
+        self.sideband_rx = 800
         self.samp_rate = samp_rate
         self.interpolation = 100 # w.r.t. transmitter
         self.decimation =  1 # w.r.t. transmitter
@@ -64,22 +69,32 @@ class XCEIVER(gr.hier_block2):
         #######################################################################
         # Receiver
         self.blocks_float_to_complex_0 = blocks.float_to_complex(1)
-        self.freq_xlating_fir_filter_R = \
+
+        # Construct a FIR filters with the given taps and a composite frequency 
+        # translation that shifts center_freq down to zero Hz. The frequency 
+        # translation logically comes before the filtering operation.
+        # Parameters
+        #   decimation set the integer decimation rate
+        #   taps a vector/list of taps of type gr_complex
+        #   center_freq	Center frequency of signal to down convert from (Hz)
+        # Band pass filter (centered at carrier, no down conversion)
+        self.freq_xlating_fir_filter_BP = \
 	   filter.freq_xlating_fir_filter_ccc( \
 	      1, \
-	      (firdes.band_pass (0.5,self.samp_rate,self.carrier-self.sideband_rx, \
-	        self.carrier+self.sideband_rx,self.transition)), \
+	      (firdes.band_pass (1,self.samp_rate,self.carrier-self.sideband_rx, \
+		self.carrier+self.sideband_rx,self.transition)), \
+	      0, \
+	      self.samp_rate)  
+        # Low pass filter (centered at carrier, with down conversion to zero Hz)
+        self.freq_xlating_fir_filter_LP = \
+	   filter.freq_xlating_fir_filter_ccc( \
+	      1, \
+	      (filter.firdes.low_pass(1,self.samp_rate, self.sideband_rx,self.transition)),
 	      self.carrier, \
-	      self.samp_rate)
-        self.rational_resampler_R_1 = filter.rational_resampler_ccc(
+	      self.samp_rate)  
+        self.rational_resampler_R = filter.rational_resampler_ccc(
                 interpolation=self.decimation,
                 decimation=100,
-                taps=None,
-                fractional_bw=None,
-        )
-        self.rational_resampler_R_2 = filter.rational_resampler_ccc(
-                interpolation=self.decimation,
-                decimation=self.interpolation/100,
                 taps=None,
                 fractional_bw=None,
         )
@@ -94,17 +109,19 @@ class XCEIVER(gr.hier_block2):
         	freq_error=0.0,
         	verbose=False,
         	log=False,
-        )        
+        )      
         self.connect((self, 0), \
-            (self.blocks_float_to_complex_0, 0))
+	    (self.blocks_float_to_complex_0, 0))
 	self.connect((self.blocks_float_to_complex_0, 0), \
-	   (self.freq_xlating_fir_filter_R, 0))      
-        self.connect((self.freq_xlating_fir_filter_R, 0),
-	   (self.rational_resampler_R_1, 0)) 
-        self.connect((self.rational_resampler_R_1, 0), \
-	   (self.rational_resampler_R_2, 0))       
-        self.connect((self.rational_resampler_R_2, 0), \
+	   (self.freq_xlating_fir_filter_BP, 0))  
+	self.connect((self.freq_xlating_fir_filter_BP, 0), \
+	   (self.freq_xlating_fir_filter_LP, 0))      
+        self.connect((self.freq_xlating_fir_filter_LP, 0),
+	   (self.rational_resampler_R, 0)) 
+        self.connect((self.rational_resampler_R, 0), \
 	   (self.digital_gfsk_demod_0, 0))
+        self.connect((self.freq_xlating_fir_filter_LP, 0), \
+            (self, 2))
         self.connect((self.digital_gfsk_demod_0, 0), \
             (self, 1))
   
@@ -206,3 +223,4 @@ class XCEIVER(gr.hier_block2):
     def set_carrier(self, carrier):
         self.carrier = carrier
         self.freq_xlating_fir_filter_xxx_0.set_center_freq(-self.carrier)
+
