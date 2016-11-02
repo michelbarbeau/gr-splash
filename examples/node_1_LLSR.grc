@@ -38,7 +38,7 @@
     </param>
     <param>
       <key>generate_options</key>
-      <value>qt_gui</value>
+      <value>no_gui</value>
     </param>
     <param>
       <key>hier_block_src_path</key>
@@ -66,7 +66,7 @@
     </param>
     <param>
       <key>run_options</key>
-      <value>prompt</value>
+      <value>run</value>
     </param>
     <param>
       <key>run</key>
@@ -117,7 +117,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(400, 501)</value>
+      <value>(440, 501)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -411,6 +411,49 @@
     </param>
   </block>
   <block>
+    <key>analog_probe_avg_mag_sqrd_x</key>
+    <param>
+      <key>alpha</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(480, 5)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>analog_probe_avg_mag_sqrd_x_0</value>
+    </param>
+    <param>
+      <key>threshold</key>
+      <value>-20</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>c</value>
+    </param>
+  </block>
+  <block>
     <key>audio_sink</key>
     <param>
       <key>alias</key>
@@ -434,7 +477,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(512, 92)</value>
+      <value>(456, 124)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -481,7 +524,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(896, 92)</value>
+      <value>(912, 49)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -501,7 +544,7 @@
     </param>
     <param>
       <key>num_outputs</key>
-      <value>1</value>
+      <value>2</value>
     </param>
     <param>
       <key>ok_to_block</key>
@@ -703,7 +746,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(168, 541)</value>
+      <value>(104, 549)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -750,7 +793,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(216, 605)</value>
+      <value>(272, 541)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -848,7 +891,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(136, 455)</value>
+      <value>(104, 455)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -911,7 +954,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(192, 45)</value>
+      <value>(80, 93)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1036,7 +1079,7 @@
     </param>
     <param>
       <key>addr</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>backoff_randomness</key>
@@ -1127,7 +1170,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(672, 54)</value>
+      <value>(672, 17)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1182,7 +1225,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(376, 45)</value>
+      <value>(304, 93)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1299,6 +1342,12 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>audio_source_0</source_block_id>
+    <sink_block_id>splash_XCEIVER_0</sink_block_id>
+    <source_key>1</source_key>
+    <sink_key>1</sink_key>
+  </connection>
+  <connection>
     <source_block_id>blocks_char_to_float_0_1</source_block_id>
     <sink_block_id>blocks_tagged_stream_to_pdu_1</sink_block_id>
     <source_key>0</source_key>
@@ -1321,12 +1370,6 @@
     <sink_block_id>splash_packet_encoder_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_random_pdu_0_0</source_block_id>
-    <sink_block_id>llsr_llsr_mac_0</sink_block_id>
-    <source_key>pdus</source_key>
-    <sink_key>from_app</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_repack_bits_bb_0</source_block_id>
@@ -1372,6 +1415,12 @@
   </connection>
   <connection>
     <source_block_id>splash_XCEIVER_0</source_block_id>
+    <sink_block_id>analog_probe_avg_mag_sqrd_x_0</sink_block_id>
+    <source_key>2</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>splash_XCEIVER_0</source_block_id>
     <sink_block_id>splash_packet_decoder_0</sink_block_id>
     <source_key>1</source_key>
     <sink_key>0</sink_key>
@@ -1386,6 +1435,6 @@
     <source_block_id>splash_packet_encoder_0</source_block_id>
     <sink_block_id>splash_XCEIVER_0</sink_block_id>
     <source_key>0</source_key>
-    <sink_key>1</sink_key>
+    <sink_key>2</sink_key>
   </connection>
 </flow_graph>

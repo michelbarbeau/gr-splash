@@ -38,7 +38,7 @@
     </param>
     <param>
       <key>generate_options</key>
-      <value>qt_gui</value>
+      <value>no_gui</value>
     </param>
     <param>
       <key>hier_block_src_path</key>
@@ -66,7 +66,7 @@
     </param>
     <param>
       <key>run_options</key>
-      <value>prompt</value>
+      <value>run</value>
     </param>
     <param>
       <key>run</key>
@@ -117,7 +117,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(448, 509)</value>
+      <value>(424, 485)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -297,6 +297,33 @@
     </param>
   </block>
   <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(232, 13)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>48000</value>
+    </param>
+  </block>
+  <block>
     <key>fec_async_decoder</key>
     <param>
       <key>alias</key>
@@ -320,7 +347,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(88, 381)</value>
+      <value>(72, 381)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -375,7 +402,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(680, 237)</value>
+      <value>(696, 237)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -411,6 +438,49 @@
     </param>
   </block>
   <block>
+    <key>analog_probe_avg_mag_sqrd_x</key>
+    <param>
+      <key>alpha</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(432, 13)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>analog_probe_avg_mag_sqrd_x_0</value>
+    </param>
+    <param>
+      <key>threshold</key>
+      <value>-70</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>c</value>
+    </param>
+  </block>
+  <block>
     <key>audio_sink</key>
     <param>
       <key>alias</key>
@@ -434,7 +504,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(512, 92)</value>
+      <value>(424, 180)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -481,7 +551,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(896, 92)</value>
+      <value>(840, 68)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -588,99 +658,6 @@
     <param>
       <key>id</key>
       <value>blocks_message_debug_0</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_message_debug</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(968, 169)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_message_debug_1</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_message_debug</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(680, 137)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_message_debug_2</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_message_debug</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(432, 185)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_message_debug_3</value>
     </param>
   </block>
   <block>
@@ -797,7 +774,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(888, 292)</value>
+      <value>(920, 244)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -911,7 +888,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(192, 45)</value>
+      <value>(208, 109)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -989,7 +966,7 @@
     <key>dflood_dflood</key>
     <param>
       <key>addr</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>alias</key>
@@ -1029,7 +1006,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(392, 288)</value>
+      <value>(384, 264)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1139,7 +1116,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(672, 54)</value>
+      <value>(632, 25)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1194,7 +1171,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(376, 45)</value>
+      <value>(392, 109)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1245,7 +1222,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1128, 257)</value>
+      <value>(1136, 209)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1282,21 +1259,9 @@
   </block>
   <connection>
     <source_block_id>Async_Decoder</source_block_id>
-    <sink_block_id>blocks_message_debug_3</sink_block_id>
-    <source_key>out</source_key>
-    <sink_key>print_pdu</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>Async_Decoder</source_block_id>
     <sink_block_id>dflood_dflood_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>from_radio</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>Async_Ecnoder</source_block_id>
-    <sink_block_id>blocks_message_debug_1</sink_block_id>
-    <source_key>out</source_key>
-    <sink_key>print_pdu</sink_key>
   </connection>
   <connection>
     <source_block_id>Async_Ecnoder</source_block_id>
@@ -1359,12 +1324,6 @@
     <sink_key>in</sink_key>
   </connection>
   <connection>
-    <source_block_id>dflood_dflood_0</source_block_id>
-    <sink_block_id>blocks_message_debug_2</sink_block_id>
-    <source_key>to_radio</source_key>
-    <sink_key>print_pdu</sink_key>
-  </connection>
-  <connection>
     <source_block_id>digital_map_bb_0</source_block_id>
     <sink_block_id>blocks_char_to_float_0_1</sink_block_id>
     <source_key>0</source_key>
@@ -1374,6 +1333,12 @@
     <source_block_id>splash_XCEIVER_0</source_block_id>
     <sink_block_id>audio_sink_0</sink_block_id>
     <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>splash_XCEIVER_0</source_block_id>
+    <sink_block_id>analog_probe_avg_mag_sqrd_x_0</sink_block_id>
+    <source_key>2</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
