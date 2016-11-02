@@ -5,11 +5,10 @@
   <category>splash</category>
   <import>import splash</import>
   <make>splash.XCEIVER()</make>
-  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
-       Sub-nodes:
-       * name
-       * key (makes the value accessible as $keyname, e.g. in the make node)
-       * type -->
+  <!-- Frequency-Shift Keying (FSK) Transceiver
+       Copyright 2016 Carleton University.
+       Authors: Michel Barbeau & Ahmad Traboulsi
+       Version: November 1, 2016 -->
   <param>
     <name>Sampling rates</name>
     <key>samp_rate</key>
@@ -34,15 +33,11 @@
        * vlen
        * optional (set to 1 for optional inputs) -->
   <sink>
-    <!-- <name>from_ulp</name> -->
     <name>audio in</name>
-    <!-- <type>message</type> -->
-    <type>int</type>
+    <type>float</type>
   </sink>
   <sink>
-    <!-- <name>from_ulp</name> -->
     <name>frame in</name>
-    <!-- <type>message</type> -->
     <type>byte</type>
   </sink>
 
@@ -52,18 +47,28 @@
        * vlen
        * optional (set to 1 for optional inputs) -->
   <source>
-    <!-- <name>to_ulp</name> -->
     <name>audio out</name>
-    <!--  <type>message</type> -->
-    <type>int</type>
+    <type>float</type>
   </source>
   <source>
-    <!-- <name>to_ulp</name> -->
     <name>frame out</name>
-    <!--  <type>message</type> -->
     <type>byte</type>
   </source>
- <doc>
-Orthogonal frequency-division multiplexing (OFDM) Transceiver.
- </doc>
+  <source>
+    <name>filter out</name>
+    <type>complex</type>
+  </source>
+<doc>
+Frequency-Shift Keying (FSK) Transceiver
+Version: November 1, 2016 
+
+Input signature,
+Port 1 = audio in
+     2 = frame in
+
+Output signature
+Port 1 = audio out
+     2 = frame out
+     3 = receive filter output
+</doc>
 </block>
