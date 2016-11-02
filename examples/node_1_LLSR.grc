@@ -1079,7 +1079,7 @@
     </param>
     <param>
       <key>addr</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>backoff_randomness</key>
@@ -1430,11 +1430,5 @@
     <sink_block_id>blocks_repack_bits_bb_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>splash_packet_encoder_0</source_block_id>
-    <sink_block_id>splash_XCEIVER_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>2</sink_key>
   </connection>
 </flow_graph>
