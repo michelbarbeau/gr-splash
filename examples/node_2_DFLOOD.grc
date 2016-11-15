@@ -1300,6 +1300,12 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>blocks_random_pdu_0_0</source_block_id>
+    <sink_block_id>dflood_dflood_0</sink_block_id>
+    <source_key>pdus</source_key>
+    <sink_key>from_app</sink_key>
+  </connection>
+  <connection>
     <source_block_id>blocks_repack_bits_bb_0</source_block_id>
     <sink_block_id>digital_map_bb_0</sink_block_id>
     <source_key>0</source_key>

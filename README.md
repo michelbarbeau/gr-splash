@@ -2,7 +2,7 @@
 
 # Copyright 2016 Carleton University.
 # Authors: Michel Barbeau, Margarita Otochkina & Ahmad Traboulsi
-# Version: October 17, 2016
+# Version: November 14, 2016
 
 ## Installing 
 

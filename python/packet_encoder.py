@@ -6,7 +6,7 @@
 # --------------
 # Copyright 2016 Carleton University.
 # Authors: Michel Barbeau
-# Version: October 17, 2016
+# Version: November 14, 2016
 # 
 # This is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -122,7 +122,10 @@ class packet_encoder_source(gr.hier_block2):
             self._bits_per_symbol,
             self._preamble,
             self._access_code,
-            self._pad_for_usrp
+            self._pad_for_usrp,
+	    0,
+	    True,
+            False
         )
         msg = gr.message_from_string(packet)
         self._msgq_out.insert_tail(msg)

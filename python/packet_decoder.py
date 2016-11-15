@@ -6,7 +6,7 @@
 # --------------
 # Copyright 2016 Carleton University.
 # Authors: Michel Barbeau
-# Version: October 17, 2016
+# Version: November 14, 2016
 # 
 # This is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -56,7 +56,7 @@ class _packet_decoder_thread(_threading.Thread):
     def run(self):
         while self.keep_running:
             msg = self._msgq.delete_head()
-            ok, payload = packet_utils.unmake_packet(msg.to_string(), int(msg.arg1()))
+            ok, payload = packet_utils.unmake_packet(msg.to_string(), int(msg.arg1()),True,False)
             if self.callback:
                 self.callback(ok, payload)
 
