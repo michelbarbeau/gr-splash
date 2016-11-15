@@ -6,7 +6,7 @@
 # ----------------------------------------
 # Copyright 2016 Carleton University.
 # Authors: Michel Barbeau & Ahmad Traboulsi
-# Version: November 1, 2016
+# Version: November 14, 2016
 # 
 # This is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -92,13 +92,17 @@ class XCEIVER(gr.hier_block2):
 	      self.carrier, \
 	      self.samp_rate)  
         self.rational_resampler_R = filter.rational_resampler_ccc(
-                interpolation=self.decimation,
-                decimation=100,
+                interpolation=1,
+                decimation=self.interpolation,
                 taps=None,
                 fractional_bw=None,
         )
 	# input is the complex modulated signal at baseband.
 	# output is a stream of bits packed 1 bit per byte (the LSB)
+        # gain_mu: controls rate of mu adjustment (float)
+        # mu: fractional delay [0.0, 1.0] (float)
+        # omega_relative_limit: sets max variation in omega (float, typically 0.000200 (200 ppm))
+        # freq_error: bit rate error as a fraction
         self.digital_gfsk_demod_0 = digital.gfsk_demod(
         	samples_per_symbol=self.sps,
         	sensitivity=self.sensitivity,
