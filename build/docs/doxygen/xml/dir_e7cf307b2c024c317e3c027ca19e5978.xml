@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_e7cf307b2c024c317e3c027ca19e5978" kind="dir">
+    <compoundname>splash</compoundname>
+    <innerfile refid="api_8h">api.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/michel/gr-splash/include/splash/"/>
+  </compounddef>
+</doxygen>

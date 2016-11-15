@@ -1,0 +1,1 @@
+        omega is the estimate of timing shift caused by carrier frequency shift, the parameter mu is the estimate of final timing shift, and gain_omega and gain_mu are weights of estimate of timing error when adjust respective parameters

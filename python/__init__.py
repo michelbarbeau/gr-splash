@@ -32,4 +32,8 @@ except ImportError:
 
 # import any pure python here
 from XCEIVER import XCEIVER
+from packet_encoder import packet_encoder
+from packet_decoder import packet_decoder
+
+
 #
