@@ -1,8 +1,15 @@
-#  Frequency-Shift Keying (FSK) Transceiver, Packet/Encoder Decoder and Forwad Error Correction (FEC).
+#  Continuous Phase Modulation (CPM) Transceiver, Packet/Encoder Decoder and Forwad Error Correction (FEC) in GNU Radio.
+
+The project includes the following contributions (see gr-splash/docs):
+
+Margarita Otochkina, Forward Error Correction in Underwater Acoustic Sensor Networks, Bachelor of Computer Science Honours Project, School of Computer Science, Carleton University, December 2016.
+
+Ahmad, Traboulsi, Software-Defined Underwater Acoustic Modems for Arctic-Like Environements, Master of Computer Science, Thesis, School of Computer Science, Carleton University, September 2016.
+
 
 # Copyright 2016 Carleton University.
 # Authors: Michel Barbeau, Margarita Otochkina & Ahmad Traboulsi
-# Version: November 14, 2016
+# Version: December 18, 2016
 
 ## Installing 
 
