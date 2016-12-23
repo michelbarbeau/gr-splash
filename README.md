@@ -1,4 +1,4 @@
-#  Continuous Phase Modulation (CPM) Transceiver, Packet/Encoder Decoder and Forwad Error Correction (FEC) in GNU Radio.
+#  Continuous-Phase Frequency-Shift Keying (CPFSK) Transceiver, Packet/Encoder Decoder and Forward Error Correction (FEC) in GNU Radio.
 
 The project includes the following contributions (see gr-splash/docs):
 
