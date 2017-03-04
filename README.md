@@ -9,7 +9,7 @@ Ahmad, Traboulsi, Software-Defined Underwater Acoustic Modems for Arctic-Like En
 
 # Copyright 2017 Carleton University.
 # Authors: Michel Barbeau, Margarita Otochkina & Ahmad Traboulsi
-# Version: March 8, 2017
+# Version: March 4, 2017
 
 ## Installing 
 
