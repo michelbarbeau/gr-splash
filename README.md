@@ -7,9 +7,9 @@ Margarita Otochkina, Forward Error Correction in Underwater Acoustic Sensor Netw
 Ahmad, Traboulsi, Software-Defined Underwater Acoustic Modems for Arctic-Like Environements, Master of Computer Science, Thesis, School of Computer Science, Carleton University, September 2016.
 
 
-# Copyright 2016 Carleton University.
+# Copyright 2017 Carleton University.
 # Authors: Michel Barbeau, Margarita Otochkina & Ahmad Traboulsi
-# Version: December 18, 2016
+# Version: March 8, 2017
 
 ## Installing 
 
@@ -64,3 +64,12 @@ To run outside gnuradio-companion (after generating the flow graph):
 cd gr-splash/examples
 
 python top_block.py
+
+## Experimental Work
+
+Experimental work is in progress. Watch the following water bucket demo of gr-spals and gr-dflood.
+
+[![Derek Aubin Demo](https://i1.ytimg.com/vi/6tYkVLcpsKY/hqdefault.jpg)](https://youtu.be/6tYkVLcpsKY)
+
+Outdoor experimental work is planned for this summer. Stay tuuned!
+
