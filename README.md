@@ -71,5 +71,5 @@ Experimental work is in progress. Watch the following water bucket demo of gr-sp
 
 [![Derek Aubin Demo](https://i1.ytimg.com/vi/6tYkVLcpsKY/hqdefault.jpg)](https://youtu.be/6tYkVLcpsKY)
 
-Outdoor experimental work is planned for this summer. Stay tuuned!
+Outdoor experimental work is planned for this summer. Stay tuned!
 
