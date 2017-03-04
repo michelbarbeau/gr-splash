@@ -67,7 +67,7 @@ python top_block.py
 
 ## Experimental Work
 
-Experimental work is in progress. Watch the following water bucket demo of gr-spalsh and gr-dflood.
+Experimental work is in progress. Watch the following water bucket demo of gr-spalsh and gr-dflood (produced by Derek Aubin).
 
 [![Derek Aubin Demo](https://i1.ytimg.com/vi/6tYkVLcpsKY/hqdefault.jpg)](https://youtu.be/6tYkVLcpsKY)
 
